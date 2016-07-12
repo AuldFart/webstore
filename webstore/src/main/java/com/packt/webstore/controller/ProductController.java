@@ -105,6 +105,16 @@ public class ProductController {
 			}
 		}
 
+		MultipartFile productPdf = productToBeAdded.getProductPdf();
+		if (productPdf != null && !productPdf.isEmpty()) {
+			try {
+				productPdf.transferTo(new File(rootDirectory + "resources/pdf/"
+						+ productToBeAdded.getProductId() + ".pdf"));
+			} catch (Exception e) {
+				throw new RuntimeException("Product pdf saving failed", e);
+			}
+		}
+
 		productService.addProduct(productToBeAdded);
 		return "redirect:/products";
 	}
@@ -114,7 +124,7 @@ public class ProductController {
 
 		binder.setAllowedFields("productId", "name", "unitPrice",
 				"description", "manufacturer", "category", "unitsInStock",
-				"condition", "productImage");
+				"condition", "productImage", "productPdf");
 
 	}
 

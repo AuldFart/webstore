@@ -23,6 +23,8 @@ public class Product {
 	private String condition;
 	@JsonIgnore 
 	private MultipartFile  productImage;
+	@JsonIgnore 
+	private MultipartFile  productPdf;	
 
 	public Product() {
 		super();
@@ -70,6 +72,14 @@ public class Product {
 	public void setProductImage(MultipartFile productImage) {
 		this.productImage = productImage;
 	}
+	
+	public MultipartFile getProductPdf() {
+		return productPdf;
+	}
+
+	public void setProductPdf(MultipartFile productPdf) {
+		this.productPdf = productPdf;
+	}	
 
 	public void setDescription(String description) {
 		this.description = description;
