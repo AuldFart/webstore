@@ -2,6 +2,7 @@ package com.packt.webstore.domain;
 
 import java.math.BigDecimal;
 
+import javax.jws.WebMethod;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -21,7 +22,7 @@ public class Product {
 	private long unitsInOrder;
 	private boolean discontinued;
 	private String condition;
-	@JsonIgnore 
+	@JsonIgnore
 	private MultipartFile  productImage;
 	@JsonIgnore 
 	private MultipartFile  productPdf;	
@@ -69,13 +70,16 @@ public class Product {
 		return productImage;
 	}
 
+
 	public void setProductImage(MultipartFile productImage) {
 		this.productImage = productImage;
 	}
 	
+	@XmlTransient  
 	public MultipartFile getProductPdf() {
 		return productPdf;
 	}
+
 
 	public void setProductPdf(MultipartFile productPdf) {
 		this.productPdf = productPdf;
