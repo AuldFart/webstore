@@ -133,7 +133,7 @@ public class ProductController {
 
 		binder.setAllowedFields("productId", "name", "unitPrice",
 				"description", "manufacturer", "category", "unitsInStock",
-				"condition", "productImage", "productPdf");
+				"condition", "productImage", "productPdf","language");
 
 	}
 

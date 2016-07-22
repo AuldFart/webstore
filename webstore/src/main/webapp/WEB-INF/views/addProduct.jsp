@@ -18,16 +18,20 @@
 			</div>
 			<a href="<c:url value="/j_spring_security_logout" />"
 				class="btn btn-danger btn-mini pull-right">logout</a>
+			<div class="pull-right" style="padding-right: 50px">
+				<a href="?language=en">English</a>|<a href="?language=nl">Dutch</a>
+			</div>
 		</div>
 	</section>
 	<section class="container">
-		<form:form modelAttribute="newProduct" class="form-horizontal" enctype="multipart/form-data">
+		<form:form modelAttribute="newProduct" class="form-horizontal"
+			enctype="multipart/form-data">
 			<fieldset>
 				<legend>Add new product</legend>
 
 				<div class="form-group">
 					<label class="control-label col-lg-2 col-lg-2" for="productId"><spring:message
-							code="addProdcut.form.productId.label" /></label>
+							code="addProduct.form.productId.label" /></label>
 					<div class="col-lg-10">
 						<form:input id="productId" path="productId" type="text"
 							class="form:input-large" />
@@ -99,7 +103,7 @@
 
 				<div class="form-group">
 					<label class="control-label col-lg-2" for="productImage"> <spring:message
-							code="addProdcut.form.productImage.label" />
+							code="addProduct.form.productImage.label" />
 					</label>
 					<div class="col-lg-10">
 						<form:input id="productImage" path="productImage" type="file"
@@ -109,14 +113,14 @@
 
 				<div class="form-group">
 					<label class="control-label col-lg-2" for="productPdf"> <spring:message
-							code="addProdcut.form.productPdf.label" />
+							code="addProduct.form.productPdf.label" />
 					</label>
 					<div class="col-lg-10">
 						<form:input id="productPdf" path="productPdf" type="file"
 							class="form:input-large" />
 					</div>
-				</div>			
-				
+				</div>
+
 
 				<div class="form-group">
 					<div class="col-lg-offset-2 col-lg-10">
