@@ -23,27 +23,39 @@
 					src="<c:url value="/resource/images/${product.productId}.png"></c:url>"
 					alt="image" style="width: 100%" />
 			</div>
+			<div class="pull-right" style="padding-right: 50px">
+				<a href="?language=en">English</a>|<a href="?language=nl">Dutch</a>
+			</div>
 			<div class="col-md-5">
 				<h3>${product.name}</h3>
 				<p>${product.description}</p>
 				<p>
-					<strong>Item Code : </strong><span class="label label-warning">${product.productId}</span>
+					<strong><spring:message code="product.form.itemcode.label" /></strong><span
+						class="label label-warning">${product.productId}</span>
 				</p>
 				<p>
-					<strong>manufacturer</strong> : ${product.manufacturer}
+										<strong>manufacturer</strong> : ${product.manufacturer}
+					<strong><spring:message
+							code="product.form.manufacturer.label" /></strong> :
+					${product.manufacturer}
 				</p>
 				<p>
-					<strong>category</strong> : ${product.category}
+					<strong><spring:message code="product.form.category.label" /></strong>
+					: ${product.category}
 				</p>
 				<p>
-					<strong>Availble units in stock </strong> : ${product.unitsInStock}
+					<strong><spring:message
+							code="product.form.unitsinstock.label" /></strong> :
+					${product.unitsInStock}
 				</p>
 				<h4>${product.unitPrice}USD</h4>
 				<p>
 					<a href="#" class="btn btn-warning btn-large"> <span
-						class="glyphicon-shopping-cart glyphicon"></span> Order Now
+						class="glyphicon-shopping-cart glyphicon"></span> <spring:message
+							code="product.form.ordernow.label" />
 					</a> <a href="<spring:url value="/products" />" class="btn btn-default">
-						<span class="glyphicon-hand-left glyphicon"></span> back
+						<span class="glyphicon-hand-left glyphicon"></span>
+					<spring:message code="product.form.back.label" />
 					</a>
 
 				</p>
