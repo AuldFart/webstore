@@ -133,7 +133,7 @@ public class ProductController {
 
 		binder.setAllowedFields("productId", "name", "unitPrice",
 				"description", "manufacturer", "category", "unitsInStock",
-				"condition", "productImage", "productPdf","language");
+				"condition", "productImage", "productPdf", "language");
 
 	}
 
@@ -148,6 +148,11 @@ public class ProductController {
 		mav.setViewName("productNotFound");
 		return mav;
 
+	}
+
+	@RequestMapping("/invalidPromoCode")
+	public String invalidPromoCode() {
+		return "invalidPromoCode";
 	}
 
 }
